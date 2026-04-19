@@ -19,6 +19,13 @@ dependencies {
     testRuntimeOnly(libs.junit.platform.launcher)
 }
 
+springBoot {
+    buildInfo() {
+        // Exclude build timestamp to ensure build reproducibility
+        excludes = ['time']
+    }
+}
+
 tasks.named('test', Test) {
     useJUnitPlatform()
 }
