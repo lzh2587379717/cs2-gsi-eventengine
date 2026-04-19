@@ -5,7 +5,6 @@ plugins {
 }
 
 group = 'io.github.lzh2587379717.cs2'
-version = '0.0.1-SNAPSHOT'
 description = 'cs2-gsi-eventengine'
 
 java {
