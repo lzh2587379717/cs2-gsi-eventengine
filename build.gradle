@@ -2,6 +2,7 @@ plugins {
     id 'java'
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.spring.dependency.management)
+    alias(libs.plugins.gradle.git.properties)
 }
 
 group = 'io.github.lzh2587379717.cs2'
