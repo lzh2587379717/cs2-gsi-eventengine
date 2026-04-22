@@ -1,0 +1,17 @@
+[versions]
+spring-boot = "4.0.5"
+spring-dependency-management = "1.1.7"
+gradle-git-properties = "2.5.7"
+cyclonedx = "3.2.4"
+java = "25"
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
+gradle-git-properties = { id = "com.gorylenko.gradle-git-properties", version.ref = "gradle-git-properties" }
+cyclonedx = { id = "org.cyclonedx.bom", version.ref = "cyclonedx" }
+
+[libraries]
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }

@@ -1,1 +1,11 @@
+# default: normalize line endings
 * text=auto eol=lf
+
+# gradle wrapper must be LF for unix shells
+gradlew text eol=lf
+
+# windows batch scripts
+*.bat text eol=crlf
+
+# binary files
+*.jar binary

@@ -1,0 +1,56 @@
+import org.cyclonedx.gradle.CyclonedxDirectTask
+import org.cyclonedx.model.*
+
+plugins {
+    id 'java'
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dependency.management)
+    alias(libs.plugins.gradle.git.properties)
+    alias(libs.plugins.cyclonedx)
+}
+
+group = 'io.github.lzh2587379717.cs2'
+description = 'cs2-gsi-eventengine'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(libs.versions.java.get() as int)
+    }
+}
+
+dependencies {
+    implementation(libs.spring.boot.starter)
+    testImplementation(libs.spring.boot.starter.test)
+    testRuntimeOnly(libs.junit.platform.launcher)
+}
+
+springBoot {
+    buildInfo() {
+        // Exclude build timestamp to ensure build reproducibility
+        excludes = ['time']
+    }
+}
+
+tasks.named('test', Test) {
+    useJUnitPlatform()
+}
+
+tasks.named('cyclonedxDirectBom', CyclonedxDirectTask) {
+    projectType = Component.Type.APPLICATION
+
+    organizationalEntity = new OrganizationalEntity().tap {
+        name = "lzh2587379717"
+        urls = ["https://github.com/lzh2587379717/cs2-gsi-eventengine"]
+        addContact(new OrganizationalContact().tap {
+            name = "LZH"
+            email = "186022561+lzh2587379717@users.noreply.github.com"
+        })
+    }
+
+    licenseChoice = new LicenseChoice().tap {
+        addLicense(new License().tap {
+            id = "MIT"
+            url = "https://opensource.org/licenses/MIT"
+        })
+    }
+}
