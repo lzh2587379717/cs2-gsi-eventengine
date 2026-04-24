@@ -1,5 +1,10 @@
 # Ignore all XML files
 *.xml
+# Copyright configuration files
+!/copyright/java.xml
+!/copyright/profiles_settings.xml
+# Scope configuration files
+!/scopes/java.xml
 # Default ignored files
 /shelf/
 # Editor-based HTTP Client requests
