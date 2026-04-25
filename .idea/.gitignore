@@ -1,9 +1,11 @@
 # Ignore all XML files
 *.xml
 # Copyright configuration files
+!/copyright/gradle.xml
 !/copyright/java.xml
 !/copyright/profiles_settings.xml
 # Scope configuration files
+!/scopes/gradle.xml
 !/scopes/java.xml
 # Code styles configuration files
 !/codeStyles/codeStyleConfig.xml
