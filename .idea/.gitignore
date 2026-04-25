@@ -1,0 +1,18 @@
+# Ignore all XML files
+*.xml
+# Copyright configuration files
+!/copyright/java.xml
+!/copyright/profiles_settings.xml
+# Scope configuration files
+!/scopes/java.xml
+# Code styles configuration files
+!/codeStyles/codeStyleConfig.xml
+!/codeStyles/Project.xml
+# Default ignored files
+/shelf/
+# Editor-based HTTP Client requests
+/httpRequests/
+# Ignored default folder with query files
+/queries/
+# Datasource local storage ignored files
+/dataSources/
