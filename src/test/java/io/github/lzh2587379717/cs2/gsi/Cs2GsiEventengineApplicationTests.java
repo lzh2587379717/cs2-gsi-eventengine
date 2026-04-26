@@ -13,8 +13,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class Cs2GsiEventengineApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
