@@ -1,8 +1,8 @@
 <component name="CopyrightManager">
-  <settings>
-    <module2copyright>
-      <element module="java" copyright="java" />
-      <element module="gradle" copyright="gradle" />
-    </module2copyright>
-  </settings>
+	<settings>
+		<module2copyright>
+			<element module="java" copyright="java"/>
+			<element module="gradle" copyright="gradle"/>
+		</module2copyright>
+	</settings>
 </component>
