@@ -1,3 +1,6 @@
 spring:
   application:
     name: cs2-gsi-eventengine
+
+server:
+  port: 3000
