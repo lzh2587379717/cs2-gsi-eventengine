@@ -1,3 +1,9 @@
 spring:
   application:
     name: cs2-gsi-eventengine
+  messages:
+    basename: i18n/messages
+    fallback-to-system-locale: false
+
+server:
+  port: 3000
