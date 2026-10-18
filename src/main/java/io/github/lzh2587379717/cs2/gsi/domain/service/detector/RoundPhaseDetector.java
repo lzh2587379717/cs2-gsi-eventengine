@@ -35,18 +35,17 @@ public class RoundPhaseDetector implements ChangeDetector {
 
 		List<GsiEvent> events = new ArrayList<>();
 		events.add(new RoundPhaseChangeEvent(prev, curr));
-
-		if (curr == RoundPhase.FREEZETIME) {
-			events.add(new FreezeTimeStartEvent());
-		}
-		if (curr == RoundPhase.LIVE) {
-			events.add(new RoundStartEvent());
-		}
-		if (curr == RoundPhase.OVER) {
-			events.add(new RoundEndEvent());
-		}
+		events.add(detectRoundPhaseEvent(curr));
 
 		return events;
+	}
+
+	private GsiEvent detectRoundPhaseEvent(RoundPhase phase) {
+		return switch (phase) {
+			case FREEZETIME -> new FreezeTimeStartEvent();
+			case LIVE -> new RoundStartEvent();
+			case OVER -> new RoundEndEvent();
+		};
 	}
 
 }
