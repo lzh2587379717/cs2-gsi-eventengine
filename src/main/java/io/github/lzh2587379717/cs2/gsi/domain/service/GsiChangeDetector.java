@@ -23,6 +23,7 @@ public class GsiChangeDetector {
 	}
 
 	public List<GsiEvent> detectChanges(@Nullable GameState previous, GameState current) {
+		Objects.requireNonNull(current, "current must not be null");
 		if (previous == null) {
 			return List.of();
 		}
